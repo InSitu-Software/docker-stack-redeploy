@@ -1,4 +1,4 @@
-For the underlying problem see (this issue)[https://github.com/moby/moby/issues/35048]
+For the underlying problem see [this issue](https://github.com/moby/moby/issues/35048)
 
 `stack-deploy` tries to implement the "suffix your config files" workaround using the docker packages for parsing and writing the compose.yaml file.
 
@@ -17,5 +17,5 @@ options:
     -w, --workdir string         Specify workdir (default ".")
 
 # Implementation
-stack-redeploy parses the given yaml using the (docker compose loader package)[https://github.com/docker/cli/tree/master/cli/compose/loader]. Afterwards it iterates over all top level config definitions and prefixes the config. Replacing all usages in services with the prefixed one. Finally it simply calls the `docker` binary to deploy the stack.
+stack-redeploy parses the given yaml using the [docker compose loader package](https://github.com/docker/cli/tree/master/cli/compose/loader). Afterwards it iterates over all top level config definitions and prefixes the config. Replacing all usages in services with the prefixed one. Finally it simply calls the `docker` binary to deploy the stack.
 
